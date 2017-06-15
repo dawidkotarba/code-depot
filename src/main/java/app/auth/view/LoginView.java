@@ -33,7 +33,7 @@ public class LoginView extends HorizontalLayout implements View {
     public void enter(final ViewChangeListener.ViewChangeEvent viewChangeEvent) {
         if (userRepository.findAll().isEmpty()) {
             registrationService.registerUser("t@t.pl", "test", UserRole.ROLE_ADMIN);
-            registrationService.registerUser("t2@t.pl", "test", UserRole.ROLE_CUSTOMER);
+//            registrationService.registerUser("t2@t.pl", "test", UserRole.ROLE_CUSTOMER);
         }
 
         Panel panel = new Panel("test");

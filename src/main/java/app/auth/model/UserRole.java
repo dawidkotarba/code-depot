@@ -8,12 +8,7 @@ public enum UserRole implements GrantedAuthority {
         public String getAuthority() {
             return name();
         }
-    }, ROLE_CUSTOMER {
-        @Override
-        public String getAuthority() {
-            return name();
-        }
-    }, ROLE_SPECIALIST {
+    }, ROLE_USER {
         @Override
         public String getAuthority() {
             return name();
