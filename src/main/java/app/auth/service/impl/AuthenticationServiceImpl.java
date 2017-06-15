@@ -11,8 +11,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Named
 public class AuthenticationServiceImpl implements AuthenticationService {
@@ -35,7 +35,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public Set<UserRole> getCurrentUserAuthorities() {
         final Collection<UserRole> authorities = (Collection<UserRole>) SecurityContextHolder.getContext().getAuthentication().getAuthorities();
-        return authorities.stream().collect(Collectors.toSet());
+        return new HashSet<>(authorities);
     }
 
     @Override
