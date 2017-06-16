@@ -23,7 +23,7 @@ public class BusinessObject<T extends AbstractDocument> implements Serializable 
 
     @NotNull
     @Getter
-    private final MongoRepository<T, String> mongoRepository;
+    private final MongoRepository<T, String> repository;
 
     public BusinessObject(final T document, final Class<T> clazz, final String mongoRepositoryName) {
         Preconditions.checkNotNull(document);
@@ -32,7 +32,7 @@ public class BusinessObject<T extends AbstractDocument> implements Serializable 
 
         this.document = document;
         this.clazz = clazz;
-        mongoRepository = getRepositoryByName(mongoRepositoryName);
+        repository = getRepositoryByName(mongoRepositoryName);
     }
 
     private MongoRepository getRepositoryByName(final String mongoRepositoryName) {

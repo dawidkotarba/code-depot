@@ -1,11 +1,11 @@
 package app.authentication.view;
 
+import app.authentication.model.UserBo;
 import app.authentication.model.UserDocument;
 import app.authentication.model.UserRole;
 import app.common.repository.UserRepository;
 import app.common.view.components.*;
 import app.login.service.LoginService;
-import app.registration.service.RegistrationService;
 import com.vaadin.data.Binder;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.View;
@@ -24,16 +24,14 @@ public class LoginView extends HorizontalLayout implements View {
     private UserRepository userRepository;
 
     @Inject
-    private RegistrationService registrationService;
-
-    @Inject
     private LoginService loginService;
 
     @Override
     public void enter(final ViewChangeListener.ViewChangeEvent viewChangeEvent) {
         if (userRepository.findAll().isEmpty()) {
-            registrationService.registerUser("t@t.pl", "test", UserRole.ROLE_ADMIN);
-//            registrationService.registerUser("t2@t.pl", "test", UserRole.ROLE_CUSTOMER);
+            final UserDocument userDocument = new UserDocument();
+            final UserBo userBo = new UserBo(userDocument);
+            userBo.register("test", "t@t.pl", UserRole.ROLE_ADMIN);
         }
 
         final Panel panel = new Panel("test");
