@@ -1,7 +1,7 @@
-package app.auth.service.impl;
+package app.authentication.service.impl;
 
-import app.auth.model.UserRole;
-import app.auth.service.AuthenticationService;
+import app.authentication.model.UserRole;
+import app.authentication.service.AuthenticationService;
 import com.google.common.base.Preconditions;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;

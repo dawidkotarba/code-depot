@@ -1,4 +1,4 @@
-package app.auth.utils;
+package app.authentication.utils;
 
 import org.springframework.security.core.GrantedAuthority;
 

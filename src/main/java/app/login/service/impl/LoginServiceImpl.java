@@ -1,6 +1,6 @@
 package app.login.service.impl;
 
-import app.auth.service.AuthenticationService;
+import app.authentication.service.AuthenticationService;
 import app.login.service.LoginService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -1,7 +1,7 @@
 package app.registration.service.impl;
 
-import app.auth.model.UserRole;
-import app.common.model.User;
+import app.authentication.model.UserDocument;
+import app.authentication.model.UserRole;
 import app.common.repository.UserRepository;
 import app.registration.service.RegistrationService;
 import com.google.common.base.Preconditions;
@@ -30,7 +30,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         Preconditions.checkNotNull(password);
         Preconditions.checkNotNull(authorities);
 
-        final User user = new User();
+        final UserDocument user = new UserDocument();
         user.setUsername(username);
         user.setPassword(passwordEncoder.encode(password));
         user.setEnabled(true);

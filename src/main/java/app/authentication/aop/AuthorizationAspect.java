@@ -1,7 +1,7 @@
-package app.auth.aop;
+package app.authentication.aop;
 
-import app.auth.annotations.Authorize;
-import app.auth.service.AuthorizationService;
+import app.authentication.annotations.Authorize;
+import app.authentication.service.AuthorizationService;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -22,7 +22,7 @@ public class AuthorizationAspect {
         this.authorizationService = authorizationService;
     }
 
-    @Before("@annotation(app.auth.annotations.Authorize)")
+    @Before("@annotation(app.authentication.annotations.Authorize)")
     public void checkAuthorization(final JoinPoint joinPoint) {
 
         final MethodSignature signature = (MethodSignature) joinPoint.getSignature();

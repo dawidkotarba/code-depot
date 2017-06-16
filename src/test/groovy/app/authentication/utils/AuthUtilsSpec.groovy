@@ -1,6 +1,6 @@
-package app.auth.utils
+package app.authentication.utils
 
-import app.auth.model.UserRole
+import app.authentication.model.UserRole
 import spock.lang.Specification
 import spock.lang.Unroll
 

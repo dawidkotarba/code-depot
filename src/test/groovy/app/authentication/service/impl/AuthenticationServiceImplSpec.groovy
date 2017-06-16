@@ -1,4 +1,4 @@
-package app.auth.service.impl
+package app.authentication.service.impl
 
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.core.Authentication

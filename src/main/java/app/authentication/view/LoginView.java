@@ -1,7 +1,7 @@
-package app.auth.view;
+package app.authentication.view;
 
-import app.auth.model.UserRole;
-import app.common.model.User;
+import app.authentication.model.UserDocument;
+import app.authentication.model.UserRole;
 import app.common.repository.UserRepository;
 import app.common.view.components.*;
 import app.login.service.LoginService;
@@ -36,34 +36,34 @@ public class LoginView extends HorizontalLayout implements View {
 //            registrationService.registerUser("t2@t.pl", "test", UserRole.ROLE_CUSTOMER);
         }
 
-        Panel panel = new Panel("test");
+        final Panel panel = new Panel("test");
         panel.setSizeUndefined();
         addComponent(panel);
-        FormLayout formLayout = new FormLayout();
-        RequiredEmailField email = new RequiredEmailField("Email");
+        final FormLayout formLayout = new FormLayout();
+        final RequiredEmailField email = new RequiredEmailField("Email");
         email.setMaxLength(10);
-        Binder<User> binder = new Binder<>();
+        final Binder<UserDocument> binder = new Binder<>();
 //        binder.forField(email).withValidator(new EmailValidator("email!!!!")).
 //                bind(User::getUsername, User::setUsername);
         formLayout.addComponent(email);
 
-        RequiredPasswordField password = new RequiredPasswordField("Password");
+        final RequiredPasswordField password = new RequiredPasswordField("Password");
         password.setRequiredIndicatorVisible(true);
         password.setMaxLength(10);
-        binder.bind(password, User::getPassword, User::setPassword);
+        binder.bind(password, UserDocument::getPassword, UserDocument::setPassword);
         formLayout.addComponent(password);
 
         final InputLengthCounterLabel counter = new InputLengthCounterLabel(password);
         formLayout.addComponent(counter);
 
-        RequiredTextField company = new RequiredTextField("Company");
+        final RequiredTextField company = new RequiredTextField("Company");
         company.setRequiredIndicatorVisible(true);
 
         formLayout.addComponent(company);
         formLayout.setSizeUndefined();
         formLayout.setMargin(true);
 
-        Button button = new ErrorAwareButton("Log in", email, password);
+        final Button button = new ErrorAwareButton("Log in", email, password);
         button.setEnabled(false);
         button.addClickListener(clickEvent -> {
             button.setCaption("logged");
@@ -78,7 +78,7 @@ public class LoginView extends HorizontalLayout implements View {
 //            loginService.logOut();
 //        });
 
-        Button button2 = new Button("security");
+        final Button button2 = new Button("security");
         button2.addClickListener(clickEvent -> {
             final Navigator navigator = UI.getCurrent().getNavigator();
             navigator.navigateTo("test");

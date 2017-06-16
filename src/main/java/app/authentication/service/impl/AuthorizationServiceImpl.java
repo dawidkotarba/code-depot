@@ -1,8 +1,8 @@
-package app.auth.service.impl;
+package app.authentication.service.impl;
 
-import app.auth.model.UserRole;
-import app.auth.service.AuthorizationService;
-import app.auth.utils.AuthUtils;
+import app.authentication.model.UserRole;
+import app.authentication.service.AuthorizationService;
+import app.authentication.utils.AuthUtils;
 import app.common.exceptions.model.NotAuthorizedException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;

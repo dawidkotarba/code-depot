@@ -1,6 +1,6 @@
-package app.common.model;
+package app.authentication.model;
 
-import app.auth.model.UserRole;
+import app.common.model.AbstractDocument;
 import lombok.Data;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.Set;
 
 @Data
-public class User extends AbstractDocument implements UserDetails {
+public class UserDocument extends AbstractDocument implements UserDetails {
 
     @Indexed(unique = true)
     private String username;

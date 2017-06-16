@@ -1,4 +1,4 @@
-package app.auth.view;
+package app.authentication.view;
 
 import app.login.service.LoginService;
 import com.vaadin.server.VaadinRequest;
@@ -30,8 +30,8 @@ public class AdminView extends UI {
 //            return;
 //        }
 
-        HorizontalLayout layout = new HorizontalLayout();
-        Panel panel = new Panel("Admin view");
+        final HorizontalLayout layout = new HorizontalLayout();
+        final Panel panel = new Panel("Admin view");
         layout.addComponent(panel);
         setContent(layout);
     }

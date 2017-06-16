@@ -1,4 +1,4 @@
-package app.auth.exceptions;
+package app.authentication.exceptions;
 
 import app.common.exceptions.model.AbstractApplicationRuntimeException;
 

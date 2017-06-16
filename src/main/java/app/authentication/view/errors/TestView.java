@@ -1,7 +1,7 @@
-package app.auth.view.errors;
+package app.authentication.view.errors;
 
-import app.auth.model.UserRole;
-import app.auth.service.AuthorizationService;
+import app.authentication.model.UserRole;
+import app.authentication.service.AuthorizationService;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.spring.annotation.UIScope;
