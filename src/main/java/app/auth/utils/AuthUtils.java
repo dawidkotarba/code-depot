@@ -10,11 +10,6 @@ public final class AuthUtils {
     }
 
     public static boolean isAuthorized(final Set<? extends GrantedAuthority> userRoles, final Set<? extends GrantedAuthority> allowedRoles) {
-        for (GrantedAuthority allowedRole : allowedRoles) {
-            if (userRoles.contains(allowedRole)) {
-                return true;
-            }
-        }
-        return false;
+        return allowedRoles.stream().anyMatch(userRoles::contains);
     }
 }
