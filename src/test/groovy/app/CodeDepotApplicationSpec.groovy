@@ -1,14 +1,9 @@
 package app
 
+import helpers.AbstractIntegrationSpec
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.junit4.SpringRunner
-import spock.lang.Specification
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-class CodeDepotApplicationSpec extends Specification {
+class CodeDepotApplicationSpec extends AbstractIntegrationSpec {
 
     @Test
     def "should load context"() {

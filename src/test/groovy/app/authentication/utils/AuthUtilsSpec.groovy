@@ -1,10 +1,10 @@
 package app.authentication.utils
 
 import app.authentication.model.UserRole
-import spock.lang.Specification
+import helpers.AbstractUnitSpec
 import spock.lang.Unroll
 
-class AuthUtilsSpec extends Specification {
+class AuthUtilsSpec extends AbstractUnitSpec {
 
     @Unroll
     def "should check if user is authorized for his roles: #userRoles and allowed roles: #allowedRoles"() {
