@@ -7,5 +7,5 @@ import spock.lang.Specification
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-abstract class AbstractIntegrationSpec extends Specification {
+abstract class AbstractIntegrationTest extends Specification {
 }

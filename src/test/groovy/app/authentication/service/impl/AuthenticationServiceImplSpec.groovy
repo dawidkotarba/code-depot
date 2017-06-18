@@ -1,11 +1,11 @@
 package app.authentication.service.impl
 
-import helpers.AbstractUnitSpec
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.core.Authentication
+import spock.lang.Specification
 import spock.lang.Unroll
 
-class AuthenticationServiceImplSpec extends AbstractUnitSpec {
+class AuthenticationServiceImplSpec extends Specification {
 
     def daoAuthenticationProvider = Stub(DaoAuthenticationProvider)
     def underTest = new AuthenticationServiceImpl(daoAuthenticationProvider)

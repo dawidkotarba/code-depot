@@ -1,9 +1,9 @@
 package app
 
-import helpers.AbstractIntegrationSpec
+import helpers.AbstractIntegrationTest
 import org.junit.Test
 
-class CodeDepotApplicationSpec extends AbstractIntegrationSpec {
+class CodeDepotApplicationTest extends AbstractIntegrationTest {
 
     @Test
     def "should load context"() {

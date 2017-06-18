@@ -1,12 +1,12 @@
 package app.authentication.model
 
 import app.authentication.repository.UserRepository
-import helpers.AbstractIntegrationSpec
+import helpers.AbstractIntegrationTest
 import org.junit.Test
 
 import javax.inject.Inject
 
-class UserBoSpec extends AbstractIntegrationSpec {
+class UserBoTest extends AbstractIntegrationTest {
 
     @Inject
     private UserRepository userRepository

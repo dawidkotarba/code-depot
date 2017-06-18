@@ -1,8 +1,8 @@
 package app.common.utils
 
-import helpers.AbstractUnitSpec
+import spock.lang.Specification
 
-class BusinessObjectUtilsSpec extends AbstractUnitSpec {
+class BusinessObjectUtilsSpec extends Specification {
 
     def "should get bean name from class"() {
         given:
