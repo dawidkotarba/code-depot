@@ -1,6 +1,6 @@
 package app.authentication.model
 
-import app.common.repository.UserRepository
+import app.authentication.repository.UserRepository
 import helpers.AbstractIntegrationSpec
 import org.junit.Test
 

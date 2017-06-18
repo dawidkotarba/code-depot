@@ -3,7 +3,7 @@ package app.authentication.view;
 import app.authentication.model.UserBo;
 import app.authentication.model.UserDocument;
 import app.authentication.model.UserRole;
-import app.common.repository.UserRepository;
+import app.authentication.repository.UserRepository;
 import app.common.view.components.*;
 import app.login.service.LoginService;
 import com.vaadin.data.Binder;

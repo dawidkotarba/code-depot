@@ -1,4 +1,4 @@
-package app.common.repository;
+package app.authentication.repository;
 
 import app.authentication.model.UserDocument;
 import org.springframework.data.mongodb.repository.MongoRepository;
