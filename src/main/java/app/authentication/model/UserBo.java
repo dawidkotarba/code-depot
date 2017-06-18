@@ -2,6 +2,7 @@ package app.authentication.model;
 
 import app.authentication.utils.AuthUtils;
 import app.common.domain.BusinessObject;
+import app.common.repository.UserRepository;
 import com.google.common.base.Preconditions;
 
 import java.util.Arrays;
@@ -10,7 +11,7 @@ import java.util.HashSet;
 public class UserBo extends BusinessObject<UserDocument> {
 
     public UserBo(final UserDocument userDocument) {
-        super(userDocument, UserDocument.class, "userRepository");
+        super(userDocument, UserDocument.class, UserRepository.class);
     }
 
     public void register(final String username, final String password, final UserRole... authorities) {

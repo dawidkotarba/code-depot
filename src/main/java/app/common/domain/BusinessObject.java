@@ -25,14 +25,14 @@ public class BusinessObject<T extends AbstractDocument> implements Serializable 
     @Getter
     private final MongoRepository<T, String> repository;
 
-    public BusinessObject(final T document, final Class<T> clazz, final String mongoRepositoryName) {
+    public BusinessObject(final T document, final Class<T> clazz, final Class<? extends MongoRepository> mongoRepositoryClass) {
         Preconditions.checkNotNull(document);
         Preconditions.checkNotNull(clazz);
-        Preconditions.checkNotNull(mongoRepositoryName);
+        Preconditions.checkNotNull(mongoRepositoryClass);
 
         this.document = document;
         this.clazz = clazz;
-        repository = getRepositoryByName(mongoRepositoryName);
+        repository = getRepositoryByName(mongoRepositoryClass.getName());
     }
 
     private MongoRepository getRepositoryByName(final String mongoRepositoryName) {
