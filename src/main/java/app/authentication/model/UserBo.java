@@ -1,8 +1,8 @@
 package app.authentication.model;
 
+import app.authentication.repository.UserRepository;
 import app.authentication.utils.AuthUtils;
 import app.common.domain.BusinessObject;
-import app.authentication.repository.UserRepository;
 import com.google.common.base.Preconditions;
 
 import java.util.Arrays;

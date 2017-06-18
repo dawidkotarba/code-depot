@@ -1,7 +1,7 @@
 package app.common.domain;
 
 import app.common.model.AbstractDocument;
-import app.common.repository.RepositoriesBeanHolder;
+import app.common.utils.BusinessObjectUtils;
 import com.google.common.base.Preconditions;
 import lombok.Data;
 import lombok.Getter;
@@ -32,10 +32,7 @@ public class BusinessObject<T extends AbstractDocument> implements Serializable 
 
         this.document = document;
         this.clazz = clazz;
-        repository = getRepositoryByName(mongoRepositoryClass.getName());
-    }
-
-    private MongoRepository getRepositoryByName(final String mongoRepositoryName) {
-        return RepositoriesBeanHolder.getRepositoryByName(mongoRepositoryName).get();
+        final String beanNameFromClass = BusinessObjectUtils.getBeanNameFromClass(mongoRepositoryClass);
+        repository = BusinessObjectUtils.getRepositoryByName(beanNameFromClass);
     }
 }
